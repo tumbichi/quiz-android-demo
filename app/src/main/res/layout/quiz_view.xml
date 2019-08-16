@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question #1"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@+id/linear_bot"
+        android:layout_below="@+id/linear_top"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/custom_question_background"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/quiz_view_text_view_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Cual es la capital mas cercana a la provincia de Jhuanjeng en la Republica comunista de China?"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:textColor="@color/primary_text"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/quiz_view_checkbox_a"
+
+                android:layout_width="128dp"
+                android:layout_height="48dp"
+
+
+                android:background="@drawable/custom_check_box_background_light"
+                android:buttonTint="@color/accent"
+                android:textColor="@color/primary_text"
+
+
+                android:text="a:Respuesta0" />
+
+            <CheckBox
+                android:id="@+id/quiz_view_checkbox_b"
+                android:layout_width="128dp"
+                android:layout_height="48dp"
+
+                android:layout_marginStart="32dp"
+                android:layout_toEndOf="@id/quiz_view_checkbox_a"
+
+                android:background="@drawable/custom_check_box_background_light"
+                android:buttonTint="@color/accent"
+                android:textColor="@color/primary_text"
+                android:text="b:Respuesta1" />
+
+            <CheckBox
+                android:id="@+id/quiz_view_checkbox_c"
+                android:layout_width="128dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/quiz_view_checkbox_a"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/custom_check_box_background_light"
+                android:buttonTint="@color/accent"
+                android:textColor="@color/primary_text"
+                android:text="c:Respuesta2" />
+
+            <CheckBox
+                android:id="@+id/quiz_view_checkbox_d"
+
+                android:layout_width="128dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/quiz_view_checkbox_b"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="48dp"
+                android:layout_toEndOf="@id/quiz_view_checkbox_c"
+                android:background="@drawable/custom_check_box_background_light"
+                android:buttonTint="@color/accent"
+                android:textColor="@color/primary_text"
+                android:text="d:Respuesta3" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_bot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/quiz_view_button_siguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_next"
+            android:textColor="@color/icons"
+            android:text="Siguiente" />
+
+    </LinearLayout>
+
+</RelativeLayout>

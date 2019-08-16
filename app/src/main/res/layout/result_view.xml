@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/custom_question_background"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/result_view_text_view_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pity"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/result_view_text_view_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textSize="48sp"/>
+
+        <ImageView
+            android:id="@+id/result_view_image_view_score"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:src="@drawable/cuatro"/>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/result_view_button_rematch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Volver a intentar"
+        android:background="@drawable/custom_button_next"
+        android:layout_gravity="bottom|center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.form.implementation.FormView">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:text="Quiz app"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="@color/accent"
+        />
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_marginStart="8dp"
+       android:layout_marginEnd="8dp"
+       android:layout_centerInParent="true">
+
+       <EditText
+           android:id="@+id/form_view_edit_text_email"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="16dp"
+           android:textAlignment="center"
+           android:inputType="textEmailAddress"
+           android:hint="Ingrese Email"/>
+       <EditText
+           android:id="@+id/form_view_edit_text_nombre"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           android:textAlignment="center"
+           android:inputType="text"
+           android:hint="Ingrese nombre"/>
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/form_view_button_siguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Siguiente"
+            android:background="@drawable/custom_button_next"
+            android:textColor="@color/icons"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
