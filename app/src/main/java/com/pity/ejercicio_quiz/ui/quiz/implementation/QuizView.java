@@ -2,6 +2,7 @@ package com.pity.ejercicio_quiz.ui.quiz.implementation;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -47,6 +48,7 @@ public class QuizView extends BaseView<QuizPresenter> implements IQuizView, View
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_view);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ButterKnife.bind(this);
         setViewListeners();
         mPresenter.attachView(this);
