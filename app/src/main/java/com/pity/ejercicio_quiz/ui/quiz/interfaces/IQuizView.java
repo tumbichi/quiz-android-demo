@@ -6,6 +6,7 @@ public interface IQuizView extends IBaseView {
     void setTextOfOptions(String optionA, String optionB, String optionC, String optionD);
     void setTextOfOptions(String optionA, String optionB, String optionC);
     void setTextOfQuestion(String question);
+    void setTextOfQuestionNumber(int questionNumber);
     void navigateToResult();
     void cleanCheckBoxs();
 }

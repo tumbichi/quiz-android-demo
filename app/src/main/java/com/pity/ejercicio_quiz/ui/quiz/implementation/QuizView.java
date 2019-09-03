@@ -24,10 +24,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class QuizView extends BaseView<QuizPresenter> implements IQuizView, View.OnClickListener {
+public class  QuizView extends BaseView<QuizPresenter> implements IQuizView, View.OnClickListener {
 
     @BindView(R.id.quiz_view_text_view_question)
     TextView textViewQuestion;
+    @BindView(R.id.quiz_view_text_view_question_number)
+    TextView textViewQuestionNumber;
     @BindView(R.id.quiz_view_button_siguiente)
     Button buttonNext;
     @BindView(R.id.quiz_view_checkbox_a)
@@ -139,6 +141,11 @@ public class QuizView extends BaseView<QuizPresenter> implements IQuizView, View
     @Override
     public void setTextOfQuestion(String question) {
         textViewQuestion.setText(question);
+    }
+
+    @Override
+    public void setTextOfQuestionNumber(int questionNumber) {
+        textViewQuestionNumber.setText("" + questionNumber);
     }
 
 

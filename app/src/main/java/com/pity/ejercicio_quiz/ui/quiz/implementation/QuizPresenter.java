@@ -1,5 +1,6 @@
 package com.pity.ejercicio_quiz.ui.quiz.implementation;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -60,8 +61,11 @@ public class QuizPresenter extends BasePresenter<IQuizView> implements IQuizPres
         playThisQuestion(CURRENT_QUESTION_ID);
     }
 
+    @SuppressLint("LongLogTag")
     private void playThisQuestion(int idQuestion){
         Question currentQuestion = currentQuiz.get(idQuestion);
+        mView.setTextOfQuestionNumber(CURRENT_QUESTION_ID + 1);
+        Log.e("QuizPresenter:playThisQuestion() ", "idQuestion=" + idQuestion);
         if (currentQuestion != null) {
             Log.e("QuizPresenter", "id: "+ currentQuestion.getId() + " " + currentQuestion.getPregunta());
             final int NUMBER_OF_OPTIONS = currentQuiz.get(idQuestion).getOptions().size();
